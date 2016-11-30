@@ -1,6 +1,6 @@
 import React, { PropTypes as T } from 'react'
 import {ButtonToolbar, Button} from 'react-bootstrap'
-import Messages from 'components/Messages/Messages'
+import MessageBoard from 'components/MessageBoard'
 import AuthService from 'utils/AuthService'
 import styles from './styles.module.css'
 
@@ -18,11 +18,10 @@ export class Login extends React.Component {
     const { auth } = this.props
     return (
       <div className={styles.root}>
-        <h2>Login</h2>
-        <Messages auth={this.props.auth}></Messages>
         <ButtonToolbar className={styles.toolbar}>
           <Button bsStyle="primary" onClick={auth.login.bind(this)}>Login</Button>
         </ButtonToolbar>
+        <MessageBoard />
       </div>
     )
   }

@@ -34,9 +34,9 @@ export class Home extends React.Component {
     return (
       <div className={styles.root}>
         <p>Welcome {profile.name}!</p>
+        <Button onClick={this.logout.bind(this)}>Logout</Button>
         <MessageBoard />
         <Messages auth={this.props.auth}></Messages>
-        <Button onClick={this.logout.bind(this)}>Logout</Button>
       </div>
     )
   }
