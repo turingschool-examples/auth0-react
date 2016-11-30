@@ -28,10 +28,6 @@ app.get('/api/v1/messages', (request, response) => {
   response.send({ messages: app.locals.messages });
 });
 
-app.get('/api/private', authenticate, function(req, res) {
-  res.json({ message: "Hello from a private endpoint! You DO need to be authenticated to see this." });
-});
-
 app.post('/api/v1/messages', authenticate, function(request, response) {
   const { message } = request.body;
 

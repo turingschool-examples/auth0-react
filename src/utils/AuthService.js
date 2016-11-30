@@ -62,7 +62,7 @@ export default class AuthService extends EventEmitter {
     return localStorage.getItem('id_token')
   }
 
-  _checkStatus(response) {
+  checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
       return response
     } else {

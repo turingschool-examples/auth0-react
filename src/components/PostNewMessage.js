@@ -39,6 +39,7 @@ export class Messages extends React.Component {
         })
       }
     )
+    .then(response => auth.checkStatus(response))
     .then(response => window.location.reload())
     .catch(error => console.log('Error submitting new message: ', error));
   }
