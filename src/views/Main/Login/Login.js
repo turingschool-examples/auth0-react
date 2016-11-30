@@ -14,7 +14,6 @@ export class Login extends React.Component {
   }
 
   render() {
-    const { auth } = this.props
     return (
       <div className={styles.login}>
         <h2>You must log in to see the message board and post new messages.</h2>
