@@ -18,7 +18,7 @@ export class Login extends React.Component {
     return (
       <div className={styles.login}>
         <h2>You must log in to see the message board and post new messages.</h2>
-        <button onClick={auth.login.bind(this)}>Login</button>
+        <button>Login</button>
       </div>
     )
   }

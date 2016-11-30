@@ -7,12 +7,7 @@ export default class AuthService extends EventEmitter {
   constructor(clientId, domain) {
     super()
 
-    this.lock = new Auth0Lock(clientId, domain, {
-      auth: {
-        redirectUrl: `${window.location.origin}/login`,
-        responseType: 'token'
-      }
-    })
+    this.lock = new Auth0Lock(// add configuration here)
 
     this.lock.on('authenticated', this._doAuthentication.bind(this))
     this.login = this.login.bind(this)
@@ -28,15 +23,6 @@ export default class AuthService extends EventEmitter {
         this.setProfile(profile)
       }
     })
-  }
-
-  login() {
-    this.lock.show()
-  }
-
-  logout() {
-    localStorage.removeItem('id_token');
-    localStorage.removeItem('profile');
   }
 
   loggedIn() {

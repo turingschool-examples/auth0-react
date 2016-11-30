@@ -26,11 +26,6 @@ export class Messages extends React.Component {
     fetch('/api/v1/messages',
       { 
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + auth.getToken()
-        },
         body: JSON.stringify({ 
           message: {
             content: this.state.messageText,

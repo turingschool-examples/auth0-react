@@ -11,8 +11,6 @@ export class MessageBoard extends React.Component {
   }
 
   componentDidMount(){
-    console.log('mounting');
-    // public http request
     fetch('/api/v1/messages')
       .then(response => response.json())
       .then(response => {
@@ -24,7 +22,6 @@ export class MessageBoard extends React.Component {
   }
 
   render(){
-    console.log('rendering', this.state.messages);
     return (
       <ul>
         {this.state.messages.map(message => {
