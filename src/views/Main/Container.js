@@ -1,5 +1,4 @@
 import React, { PropTypes as T } from 'react'
-import MessageBoard from 'components/MessageBoard'
 import styles from './styles.module.css'
 
 export class Container extends React.Component {
@@ -19,7 +18,6 @@ export class Container extends React.Component {
       <div>
         <h2 className={styles.mainTitle}>Message Board</h2>
         {children}
-        <MessageBoard />
       </div>
     )
   }
