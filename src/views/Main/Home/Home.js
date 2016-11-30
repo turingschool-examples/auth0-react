@@ -1,7 +1,6 @@
 import React, { PropTypes as T } from 'react'
 import {Button} from 'react-bootstrap'
 import Messages from 'components/Messages/Messages'
-import MessageBoard from 'components/MessageBoard'
 import AuthService from 'utils/AuthService'
 import styles from './styles.module.css'
 
@@ -35,7 +34,6 @@ export class Home extends React.Component {
       <div className={styles.root}>
         <p>Welcome {profile.name}!</p>
         <Button onClick={this.logout.bind(this)}>Logout</Button>
-        <MessageBoard />
         <Messages auth={this.props.auth}></Messages>
       </div>
     )
