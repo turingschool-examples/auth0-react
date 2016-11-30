@@ -11,7 +11,7 @@ export class Messages extends React.Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      publicMsg: "",
+      messages: "",
       privateMsg: ""
     }
   }
@@ -19,9 +19,13 @@ export class Messages extends React.Component {
   componentDidMount(){
     const { auth } = this.props
     // public http request
-    fetch('/api/public')
+    fetch('/api/v1/messages')
       .then(response => response.json())
-      .then(response => this.setState({publicMsg: response.message}))
+      .then(response => this.setState({
+        messages: response.messages
+      }))
+      .catch(error => console.log('Error: ', error));
+
     // using auth to send an http request with authorization header
     auth.fetch('/api/private')
       .then(response => this.setState({privateMsg: response.message}))
@@ -31,10 +35,7 @@ export class Messages extends React.Component {
   render(){
     return (
       <ListGroup className={styles.root}>
-        <ListGroupItem header="/api/public response">
-          {this.state.publicMsg}
-        </ListGroupItem>
-        <ListGroupItem header="/api/private response">
+        <ListGroupItem header="Post a New Message">
           {this.state.privateMsg}
         </ListGroupItem>
       </ListGroup>
