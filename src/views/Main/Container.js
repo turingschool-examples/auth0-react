@@ -20,7 +20,6 @@ export class Container extends React.Component {
         <h2 className={styles.mainTitle}>Message Board</h2>
         {children}
         <MessageBoard />
-
       </div>
     )
   }
