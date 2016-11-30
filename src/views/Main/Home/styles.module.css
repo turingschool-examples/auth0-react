@@ -1,0 +1,22 @@
+.userMeta p {
+  text-align: right;
+  font-size: 12px; 
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+.userMeta span {
+  font-weight: 600;
+}
+
+.userMeta button {
+  padding: 0px;
+  margin: 0px;
+  float: right;
+  background: #fdf6fb;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}

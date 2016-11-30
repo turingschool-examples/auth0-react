@@ -46,7 +46,8 @@ export class Messages extends React.Component {
 
   render(){
     return (
-      <div id="new-message">
+      <div className={styles.newMessage}>
+        <h2>Post a New Message</h2>
         <textarea
           value={this.state.messageText}
           onChange={this.handleMessageChange.bind(this)}
@@ -54,7 +55,7 @@ export class Messages extends React.Component {
         <input 
           type="submit"
           onClick={this.sendMessage.bind(this)}
-          value="Submit message"
+          value="Submit"
         />
       </div>
     )

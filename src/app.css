@@ -9,7 +9,7 @@
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
-    font-size: 16px;
+    /*font-size: 16px;*/
 }
 
 body {
@@ -19,6 +19,16 @@ body {
   font-smoothing: antialiased;
   padding: 0;
   margin: 50px 100px;
+}
+
+h1 {
+  border-bottom: 1px solid #eac7df;
+  padding: 0 0 5px 0;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 200;
 }
 
 button {

@@ -1,5 +1,4 @@
 import React, { PropTypes as T } from 'react'
-import styles from './styles.module.css'
 
 export class Container extends React.Component {
   static contextTypes = {
@@ -16,8 +15,8 @@ export class Container extends React.Component {
 
     return (
       <div>
-        <h2 className={styles.mainTitle}>Message Board</h2>
-        {children}
+        <h1>Super Secret Message Board</h1>
+        <div className="wrapper">{children}</div>
       </div>
     )
   }

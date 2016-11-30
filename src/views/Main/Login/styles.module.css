@@ -1,0 +1,13 @@
+.login {
+  text-align: center;
+  max-width: 600px;
+  margin: 100px auto;
+  background: #fdf6fb;
+  padding: 50px;
+  border-radius: 2px;
+}
+
+.login button {
+  margin: 15px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}

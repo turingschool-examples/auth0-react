@@ -33,10 +33,12 @@ export class Home extends React.Component {
     const { profile } = this.state
     return (
       <div className={styles.root}>
-        <p>Welcome {profile.name}!</p>
-        <Button onClick={this.logout.bind(this)}>Logout</Button>
-        <PostNewMessage auth={this.props.auth}></PostNewMessage>
+        <div className={styles.userMeta}>
+          <p>Logged in as: <span>{profile.name}</span></p>
+          <Button onClick={this.logout.bind(this)}>Logout</Button>
+        </div>
         <MessageBoard />
+        <PostNewMessage auth={this.props.auth}></PostNewMessage>
       </div>
     )
   }

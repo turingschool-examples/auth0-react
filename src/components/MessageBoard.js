@@ -30,8 +30,8 @@ export class MessageBoard extends React.Component {
         {this.state.messages.map(message => {
           return (
             <li>
-              <span class="meta">{message.username}</span>
-              <p class="message">{message.content}</p>
+              <span className={styles.meta}>{message.username}</span>
+              <p className="message">{message.content}</p>
             </li>
           )
         })}
